@@ -1,3 +1,11 @@
+#My First Perceptron
+#By: Tanmay Agarwal
+'''
+    Features:
+    - This perceptron has an accuracy score of 1.
+    - This took dataset of 1500 points to train it.
+    - I took 500 points to test it.
+'''
 import numpy as np
 np.random.seed(0)
 

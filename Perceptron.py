@@ -1,5 +1,5 @@
 #My First Perceptron
-#By: Tanmay Agarwal
+#By: Tanmay Agarwal 
 '''
     Features:
     - This perceptron has an accuracy score of 1.

@@ -1,5 +1,6 @@
+![Heading](Images/haeding.jpeg)
 # Neural-Network
-                                                          ![Heading](Images/haeding.jpeg)
+
 **Biological Neuron**
 
 A human brain has billions of neurons. Neurons are interconnected nerve cells in the human brain that are involved in processing and transmitting chemical and electrical signals. Dendrites are branches that receive information from other neurons.

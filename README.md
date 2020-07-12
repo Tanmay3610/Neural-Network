@@ -23,7 +23,7 @@ Three Layered Neural Network contains three layers that are
 2) Hidden Layer
 3) Output Layer
 
-Three three layers all together can comprise any number of neurons.
+These three layers all together can comprise any number of neurons.
 
 ![Three Layered Neural Network](Images/3_Layer_Network.jpg)
 

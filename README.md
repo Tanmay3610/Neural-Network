@@ -70,11 +70,13 @@ According to the below figure, the input X1 is multiplied by its weight W to ret
 
 After calculating the SOP, next is to feed it to the activation function in the output layer neuron. Such a function helps to capture the non-linear relationships between the inputs and the outputs and thus increasing the accuracy of the network. In this tutorial, the sigmoid function will be used. Its formula is given in the next figure.
 
+![](Images/sigmoid.jpg)
 
 Assuming that the outputs in this example range from 0 to 1, then the result returned from the sigmoid could be regarded as the predicted output. This example is a regression example but it could be converted into a classification example easily by mapping the score returned by the sigmoid to a class label.
 
 After calculating the predicted output, next is to measure the error of prediction using the square error function defined below.
 
+![](Images/error.jpg)
 
 At this time, the forward pass is complete. Based on the calculated error, we can go backward and calculate the weight gradient which is used for updating the current weight.
 

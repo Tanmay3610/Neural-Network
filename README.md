@@ -54,11 +54,55 @@ There are so many algorithms for training a Neural Network out there like:
 
 **Gradient Descent:**
 
-I prefer you should refer a 3Blue1Brown youtube channel for getting a very deep insight of this algoritm. 
-
-Prerequisite for this algorithm:
-
-1) Power Rule and
-2) Chain Rule
+I prefer you should refer a *3Blue1Brown youtube channel* for getting a very deep insight of this algoritm. 
 
 ![Gradient Descent](Images/gradient.png)
+
+This image may make you a little uncomfortable but trust me, It is the most simple algorithm to work with.
+
+**1 Input – 1 Output**
+The first step towards the generic implementation of the GD algorithm is to implement it just for a very simple architecture as shown in the figure below. There are only 1 input and 1 output and no hidden layers at all. Before thinking of using the GD algorithm in the backward pass, let's start by the forward pass and see how we can move from the input until calculating the error.
+
+**Forward Pass**
+According to the below figure, the input X1 is multiplied by its weight W to return the result X1*W. In the forward pass, it is generally known that each input is multiplied by its associated weight and the products between all inputs and their weights are then summed. This is called the sum of products (SOP). For example, there are 2 inputs X1 and X2 and their weights are W1 and W2, respectively, then the SOP will be X1*W1+X2*W2. In this example, there is only 1 input and thus the SOP is meaningless.
+
+![](Images/gd1.jpg)
+
+After calculating the SOP, next is to feed it to the activation function in the output layer neuron. Such a function helps to capture the non-linear relationships between the inputs and the outputs and thus increasing the accuracy of the network. In this tutorial, the sigmoid function will be used. Its formula is given in the next figure.
+
+
+Assuming that the outputs in this example range from 0 to 1, then the result returned from the sigmoid could be regarded as the predicted output. This example is a regression example but it could be converted into a classification example easily by mapping the score returned by the sigmoid to a class label.
+
+After calculating the predicted output, next is to measure the error of prediction using the square error function defined below.
+
+
+At this time, the forward pass is complete. Based on the calculated error, we can go backward and calculate the weight gradient which is used for updating the current weight.
+
+**Backward Pass**
+In the backward pass, we are looking to know how the error changes by changing the network weights. As a result, we want to build an equation in which both the error and the weight exist. How to do that?
+
+According to the previous figure, the error is calculated using 2 terms which are:
+
+predicted
+target
+Do not forget that the predicted value is calculated as the output of the sigmoid function. Thus, we can substitute by the sigmoid function into the error equation and the result will be as given below. But up this point, the error and the weight are not included in this equation.
+
+
+This is right but also remember that the sop is calculated as the product between the input X1 and its weight W. Thus, we can remove the sop and use its equivalent X1*W as given below.
+
+
+At this time, we can start calculating the gradient of the error relative to the weight as given in the next figure. Using the equation below for calculating the gradient might be complex especially when more inputs and weights exist. As an alternative, we can use the chain rule which simplifies the calculations.
+
+Chain Rule
+When the 2 participants of the gradient, which are the error and W in this example, are not related directly by a single equation, we can follow a chain of derivatives that starts from the error until reaching W. Looking back to the error function, we can find that the prediction is the link between the error and the weight. Thus, we can calculate the first derivative which is the derivative of the error to the predicted output as given below.
+
+
+After that, we can calculate the derivative of the predicted to the sop by calculating the derivative of the sigmoid function according to the figure below.
+
+
+Finally, we can calculate the derivative between the sop and the weight as given in the next figure.
+
+
+After going through the chain of derivatives, we can associate the error by the weight by multiplying all derivatives as given below.
+
+

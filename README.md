@@ -1,4 +1,4 @@
-![Heading](Images/haeding.jpeg)
+![Heading](Images/haeding.jpg)
 # Neural-Network
 
 **Biological Neuron**

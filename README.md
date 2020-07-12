@@ -10,7 +10,7 @@ An artificial neuron is a mathematical function based on a model of biological n
 **Perceptron**
 
 A perceptron is a neural network unit (an artificial neuron) that does certain computations to detect features or business intelligence in the input data.
-![alt text](perceptron.png)
+![Perceptron Image](Images/perceptron.png)
 
 **Three Layered Neural Network**
 

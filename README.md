@@ -85,26 +85,33 @@ In the backward pass, we are looking to know how the error changes by changing t
 
 According to the previous figure, the error is calculated using 2 terms which are:
 
-predicted
-target
+1) Predicted
+
+2) Target
+
 Do not forget that the predicted value is calculated as the output of the sigmoid function. Thus, we can substitute by the sigmoid function into the error equation and the result will be as given below. But up this point, the error and the weight are not included in this equation.
 
+![](Images/er.jpg)
 
 This is right but also remember that the sop is calculated as the product between the input X1 and its weight W. Thus, we can remove the sop and use its equivalent X1*W as given below.
 
+![](Images/er3.jpg)
 
 At this time, we can start calculating the gradient of the error relative to the weight as given in the next figure. Using the equation below for calculating the gradient might be complex especially when more inputs and weights exist. As an alternative, we can use the chain rule which simplifies the calculations.
 
-Chain Rule
-When the 2 participants of the gradient, which are the error and W in this example, are not related directly by a single equation, we can follow a chain of derivatives that starts from the error until reaching W. Looking back to the error function, we can find that the prediction is the link between the error and the weight. Thus, we can calculate the first derivative which is the derivative of the error to the predicted output as given below.
+**Chain Rule**
 
+When the 2 participants of the gradient, which are the error and W in this example, are not related directly by a single equation, we can follow a chain of derivatives that starts from the error until reaching W. Looking back to the error function, we can find that the prediction is the link between the error and the weight. Thus, we can calculate the first derivative which is the derivative of the error to the predicted output as given below.
+![](Images/chainrule.jpg)
 
 After that, we can calculate the derivative of the predicted to the sop by calculating the derivative of the sigmoid function according to the figure below.
 
+![](Images/dpre.jpg)
 
 Finally, we can calculate the derivative between the sop and the weight as given in the next figure.
 
+![](Images/x1.jpg)
 
 After going through the chain of derivatives, we can associate the error by the weight by multiplying all derivatives as given below.
 
-
+![](Images/final.jpg)

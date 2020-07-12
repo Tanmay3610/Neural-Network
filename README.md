@@ -17,4 +17,4 @@ A perceptron is a neural network unit (an artificial neuron) that does certain c
 
 **Three Layered Neural Network**
 
-
+![Three Layered Neural Network]3 Layer Network.jpg
